@@ -1,0 +1,5 @@
+git add 修改的文件
+git commit -m "something to describe"
+git commit -a 提交所有的修改（不含新文件）
+git remote add origin 第一次连接时使用
+git push -u origin "master"/git push
