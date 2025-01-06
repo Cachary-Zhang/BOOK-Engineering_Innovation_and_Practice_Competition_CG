@@ -3,3 +3,45 @@ git commit -m "something to describe"
 git commit -a 提交所有的修改（不含新文件）
 git remote add origin 第一次连接时使用
 git push -u origin "master"/git push
+
+git init
+已知云端仓库拉取到本地
+git clone             --depth 10 #仅拉取近10次更新
+git submodule update --init --recursive 对于很久的分支，要用这个更新一下子模块
+git status 查看状态，确定一下是否有没有track的模块
+git config --global user.email "210140321@cauc.edu.cn"
+git config --global user.name "Cachary"
+
+git checkout -b Cachary/0102_test 单独拉一个分支出来修改，基于某一次代码创建分支，先在vscode中右击checkout，再输入前面的
+git add filename 或者使用vscode直接上传缓存
+git commit -m 添加评论
+git push --set-upstream origin Cachary/0102_test
+git push 传输到远程/直接在vscode里面点发布
+
+git reset --soft HEAD^ 回退一次修改
+git push -f 强制提交（出现无法提交的问题）
+
+git remote -v 检查现在有的分支
+git remote add xxx ssh码
+git fetch xxx --depth 10
+git fetch -p 删除过时的分支跟踪
+
+git merge Cachary/0102_test 先切换到主分支上，然后再合并其他分支
+git rebase Cachary/0102_test 将旁分支合并到主分支上
+git cherry-pick 哈希值<commit>
+git branch xxx 哈希值 从某个节点上拉取新的分支
+git branch -d 分支名 删除分支
+git branch -D 分支名 强制删除
+
+TMUX
+apt-get install tmux
+tmux;
+tmux new -s xxx 创建一个新的终端
+tmux attach -t xxx 回到创建的某个终端
+exit 退出这个终端
+tmux kill-session -t xxx 删除某个终端
+tmux kill-server 清除所有终端
+tmux ls
+
+更改空挡名 ,在.bashrc文件中添加 conda activate gops
+在终端输入 source ~/.bashrc
